@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramesh Yadav Noodle Factory | Fresh Noodles at ₹50/KG</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--primary:#d32f2f;--primary-dark:#b71c1c;--accent:#ffb300;--dark:#212121;--light:#f9f9f9;--white:#fff;--gray:#757575;--radius:12px;--shadow:0 8px 24px rgba(0,0,0,.08)}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;scroll-behavior:smooth}
+body{background:var(--light);color:var(--dark);line-height:1.6;overflow-x:hidden}
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05);position:sticky;top:0;z-index:1000}
+.nav-container{max-width:1200px;margin:auto;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.15rem;font-weight:700;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:.5rem}.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:1.3rem;list-style:none;align-items:center}.nav-links a{text-decoration:none;color:var(--dark);font-weight:500;font-size:.9rem}
+.menu-toggle{display:none;font-size:1.5rem;cursor:pointer}
+.hero{background:linear-gradient(135deg,rgba(211,47,47,.95),rgba(183,28,28,.95)),url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80') center/cover;color:#fff;padding:5rem 1.5rem;text-align:center}
+.hero-content{max-width:800px;margin:auto;display:flex;flex-direction:column;align-items:center;gap:1.5rem}.price-badge{background:var(--accent);color:var(--dark);font-weight:800;padding:.5rem 1.5rem;border-radius:50px;font-size:1.2rem}.hero h1{font-size:2.5rem;font-weight:800;line-height:1.2}.hero p{font-size:1.05rem;max-width:650px}
+.hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:1rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.5rem;border-radius:50px;font-weight:600;text-decoration:none;border:none;cursor:pointer;font-size:1rem;box-shadow:0 4px 12px rgba(0,0,0,.1);transition:.3s}.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:var(--dark)}.btn-whatsapp{background:#25D366;color:#fff}.btn-call{background:#fff;color:var(--primary)}
+section{padding:5rem 1.5rem;max-width:1200px;margin:auto}.section-title{text-align:center;font-size:2rem;margin-bottom:3rem;position:relative}.section-title:after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:60px;height:4px;background:var(--accent);border-radius:2px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}.about-text h3{font-size:1.5rem;margin-bottom:1rem;color:var(--primary)}.about-text p{margin-bottom:1.2rem;color:var(--gray)}
+.about-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}.about-img img{width:100%;display:block}
+.product-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;max-width:450px;margin:auto;text-align:center;border:2px solid rgba(255,179,0,.3)}.product-img{height:250px;position:relative}.product-img img{width:100%;height:100%;object-fit:cover}.product-tag{position:absolute;top:15px;right:15px;background:var(--primary);color:#fff;padding:.25rem .75rem;border-radius:20px;font-size:.85rem;font-weight:600}.product-body{padding:2rem}.product-price{font-size:2rem;font-weight:800;color:var(--primary);margin:1rem 0}.product-price span{font-size:1rem;color:var(--gray);font-weight:400}.product-body p{color:var(--gray);margin-bottom:1.5rem}
+.features-grid,.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem}.feature-card,.contact-card{background:#fff;padding:2rem;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center}.feature-icon,.contact-icon{width:70px;height:70px;background:rgba(211,47,47,.1);color:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.75rem;margin:0 auto 1.2rem}.feature-card p,.contact-card p{color:var(--gray);font-size:.9rem}
+.order-container{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:3rem;max-width:700px;margin:auto}.order-form{display:flex;flex-direction:column;gap:1.5rem}.form-group{display:flex;flex-direction:column;gap:.5rem}.form-group label{font-weight:600}.form-control{padding:.9rem 1rem;border:1px solid #ddd;border-radius:8px;font-size:1rem;outline:none}.form-control:focus{border-color:var(--primary)}
+.upi-box{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:3rem;max-width:600px;margin:auto;text-align:center;border:2px dashed var(--accent)}.upi-id-display{background:#f1f1f1;padding:1rem;border-radius:8px;font-weight:600;margin:1.5rem 0;word-break:break-all;display:flex;justify-content:space-between;align-items:center;gap:1rem}.copy-btn{background:var(--primary);color:#fff;border:none;padding:.5rem 1rem;border-radius:6px;cursor:pointer;font-weight:600}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--dark);color:#fff;padding:.75rem 1.5rem;border-radius:50px;transition:.3s;z-index:2000}.toast.show{transform:translateX(-50%) translateY(0)}
+footer{background:var(--dark);color:#fff;padding:3rem 1.5rem 1.5rem;text-align:center}.footer-content{max-width:1200px;margin:auto;display:flex;flex-direction:column;gap:1.5rem;align-items:center}.footer-links{display:flex;gap:1.2rem;list-style:none;flex-wrap:wrap;justify-content:center}.footer-links a{color:#bbb;text-decoration:none}.copyright{margin-top:1.5rem;font-size:.85rem;color:#888}
+@media(max-width:768px){.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:#fff;padding:1.5rem;box-shadow:0 10px 15px rgba(0,0,0,.05)}.nav-links.active{display:flex}.menu-toggle{display:block}.about-grid{grid-template-columns:1fr}.hero h1{font-size:2rem}section{padding:3.5rem 1rem}.order-container,.upi-box{padding:1.5rem}.upi-id-display{flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="nav-container">
+<a href="#home" class="logo"><i class="fas fa-utensils"></i> Ramesh Yadav <span>Noodles</span></a>
+<div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+<ul class="nav-links" id="nav-links">
+<li><a href="#about">About Us</a></li><li><a href="#products">Fresh Noodles</a></li><li><a href="#features">Why Us</a></li><li><a href="#order">Order Now</a></li><li><a href="#contact">Contact</a></li><li><a href="#upi">UPI Payment</a></li>
+</ul></div></header>
+
+<section class="hero" id="home"><div class="hero-content">
+<div class="price-badge">₹50 / KG Only</div>
+<h1>Fresh & Quality Noodles at ₹50/KG</h1>
+<p>Quality noodles from Ramesh Yadav Noodle Factory in Barwadih, Jharkhand.</p>
+<div class="hero-buttons">
+<a href="tel:9310925161" class="btn btn-call"><i class="fas fa-phone-alt"></i> Call Now</a>
+<a href="https://wa.me/919310925161?text=Hello%20Ramesh%20Yadav%20Noodle%20Factory,%20I%20want%20to%20order%20fresh%20noodles." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Order</a>
+<a href="#order" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Order Now</a>
+</div></div></section>
+
+<section id="about"><h2 class="section-title">About Us</h2><div class="about-grid">
+<div class="about-text"><h3>Welcome to Ramesh Yadav Noodle Factory</h3>
+<p>Located in Tisri, Doranda Village, Barwadih, Jharkhand, our business focuses on providing quality noodles at an affordable price.</p>
+<p>Fresh noodles are available at <strong>₹50 per KG</strong>.</p>
+<a href="#contact" class="btn btn-primary" style="background:var(--primary);color:#fff">Get in Touch</a></div>
+<div class="about-img"><img src="https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=800&q=80" alt="Fresh noodles"></div>
+</div></section>
+
+<section id="products" style="background:#fff"><h2 class="section-title">Fresh Noodles</h2><div class="product-card">
+<div class="product-img"><img src="https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=800&q=80" alt="Fresh Noodles"><div class="product-tag">Fresh</div></div>
+<div class="product-body"><h3>Factory-Fresh Noodles</h3><div class="product-price">₹50 <span>/ KG</span></div><p>Quality noodles at an affordable price.</p><a href="#order" class="btn btn-primary" style="width:100%">Order Now</a></div>
+</div></section>
+
+<section id="features"><h2 class="section-title">Why Choose Us</h2><div class="features-grid">
+<div class="feature-card"><div class="feature-icon"><i class="fas fa-leaf"></i></div><h3>Fresh Product</h3><p>Quality-focused noodle production.</p></div>
+<div class="feature-card"><div class="feature-icon"><i class="fas fa-tag"></i></div><h3>Affordable Price</h3><p>Only ₹50 per KG.</p></div>
+<div class="feature-card"><div class="feature-icon"><i class="fas fa-shield-alt"></i></div><h3>Quality Focus</h3><p>Careful and hygienic handling.</p></div>
+<div class="feature-card"><div class="feature-icon"><i class="fas fa-phone"></i></div><h3>Easy Ordering</h3><p>Call or order directly on WhatsApp.</p></div>
+</div></section>
+
+<section id="order" style="background:#fff"><h2 class="section-title">Place Your Order</h2><div class="order-container">
+<form class="order-form" id="whatsappOrderForm">
+<div class="form-group"><label for="name">Your Name</label><input type="text" id="name" class="form-control" placeholder="Enter your full name" required></div>
+<div class="form-group"><label for="quantity">Quantity (in KG)</label><input type="number" id="quantity" class="form-control" min="1" value="1" required></div>
+<div class="form-group"><label for="address">Delivery Address / Notes</label><textarea id="address" class="form-control" rows="3" placeholder="Enter your delivery location or pickup details" required></textarea></div>
+<button type="submit" class="btn btn-whatsapp" style="width:100%"><i class="fab fa-whatsapp"></i> Send Order via WhatsApp</button>
+</form></div></section>
+
+<section id="contact"><h2 class="section-title">Contact Us</h2><div class="contact-grid">
+<div class="contact-card"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><h3>Location</h3><p>Tisri, Doranda Village, Barwadih, Jharkhand, India</p></div>
+<div class="contact-card"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><h3>Phone / WhatsApp</h3><p><a href="tel:9310925161">9310925161</a></p></div>
+<div class="contact-card"><div class="contact-icon"><i class="fas fa-user-tie"></i></div><h3>Owner</h3><p>Ramesh Yadav<br>Ramesh Yadav Noodle Factory</p></div>
+</div></section>
+
+<section id="upi" style="background:#fff"><h2 class="section-title">UPI Payment</h2><div class="upi-box">
+<p style="color:var(--gray)">Pay using your preferred UPI app.</p>
+<div class="upi-id-display"><span id="upiIdText">sagatyadav07600760@oksbi</span><button class="copy-btn" id="copyUpiBtn"><i class="fas fa-copy"></i> Copy UPI ID</button></div>
+<a href="upi://pay?pa=sagatyadav07600760@oksbi&pn=Ramesh%20Yadav%20Noodle%20Factory&cu=INR" class="btn btn-primary" style="width:100%"><i class="fas fa-qrcode"></i> Pay via UPI App</a>
+</div></section>
+
+<footer><div class="footer-content"><a href="#home" class="logo" style="color:#fff"><i class="fas fa-utensils"></i> Ramesh Yadav <span>Noodles</span></a>
+<ul class="footer-links"><li><a href="#about">About</a></li><li><a href="#products">Fresh Noodles</a></li><li><a href="#features">Why Us</a></li><li><a href="#order">Order</a></li><li><a href="#contact">Contact</a></li><li><a href="#upi">UPI</a></li></ul></div>
+<p class="copyright">© 2026 Ramesh Yadav Noodle Factory. All rights reserved.</p></footer>
+<div class="toast" id="toastMessage">UPI ID copied!</div>
+
+<script>
+const mobileMenu=document.getElementById('mobile-menu');
+const navLinks=document.getElementById('nav-links');
+mobileMenu.addEventListener('click',()=>{navLinks.classList.toggle('active');const icon=mobileMenu.querySelector('i');icon.classList.toggle('fa-bars');icon.classList.toggle('fa-times');});
+document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('active');const icon=mobileMenu.querySelector('i');icon.classList.add('fa-bars');icon.classList.remove('fa-times');}));
+
+const copyBtn=document.getElementById('copyUpiBtn');
+const upiText=document.getElementById('upiIdText').innerText;
+const toast=document.getElementById('toastMessage');
+copyBtn.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(upiText);toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2500)}catch(e){alert('UPI ID: '+upiText)}});
+
+document.getElementById('whatsappOrderForm').addEventListener('submit',(e)=>{
+e.preventDefault();
+const name=document.getElementById('name').value.trim();
+const quantity=document.getElementById('quantity').value.trim();
+const address=document.getElementById('address').value.trim();
+const message=`Hello Ramesh Yadav Noodle Factory,
+
+I would like to place an order:
+- Name: ${name}
+- Quantity: ${quantity} KG
+- Delivery Address/Notes: ${address}
+
+Please confirm my order.`;
+const whatsappUrl=`https://wa.me/919310925161?text=${encodeURIComponent(message)}`;
+window.open(whatsappUrl,'_blank');
+});
+</script>
+</body>
+</html>
